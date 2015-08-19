@@ -1,7 +1,7 @@
 ---
 layout: default
 title: R Visualisations
-
+published: false
 ---
 ### Excercise 1 : Titanic Data
 
