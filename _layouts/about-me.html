@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include head.html %}
+  <style media="screen">
+#thumbnail-wrapper {
+  position: absolute;
+  right: 25px;
+  float: right;
+  margin: 20px;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+{% assign owner-info = site.data.owner %}
+{% if owner-info.image %}
+#thumbnail-wrapper {
+  background-size: cover !important;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-image:url({{ owner-info.image }});
+}
+{% else %}
+#thumbnail-wrapper {
+  background-size:contain;
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-image:url(/assets/images/bio-image.jpg);
+}
+{% endif %}
+
+</style>
+
+</head>
+<body>
+  {% include menu.html %}
+
+  <div class="content panel panel-default container">
+    <div class="jumbotron panel-heading">
+      <div id="thumbnail-wrapper">
+
+      </div>
+      <h1>{{ page.title }}</h1>
+      <p>{{ page.description }}</p>
+
+    </div>
+    <div class="panel-body">
+      {{ content }}
+    </div>
+  </div>
+  {% include footer.html %}
+</body>
+</html>

@@ -1,0 +1,19 @@
+- site-name: Github
+  username:  avinash2692 #username
+  link: https://github.com/avinash2692# to your profile on the site
+  font-awesome-class: fa-github
+
+- site-name: Facebook
+  username: avinash2692 #username
+  link: https://www.facebook.com/avinash2692# to profile
+  font-awesome-class: fa-facebook
+
+- site-name: LinkedIn
+  username: Avinash Balakrishnan#
+  link: https://www.linkedin.com/in/avinash2692 # to profile
+  font-awesome-class: fa-linkedin
+
+- site-name: Google+
+  username: Avinash Balakrishnan # username
+  link: https://www.google.com/+avinashbalakrishnan2692 # link
+  font-awesome-class: fa-google-plus

@@ -1,0 +1,117 @@
+---
+title: Home
+layout:
+---
+<!DOCTYPE html>
+
+<html>
+<head>
+  {% include head.html %}
+
+  <style>
+  {% if site.data.home-data.bgimage %}
+  .home {
+    background-image: url({{ site.data.home-data.bgimage }});
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  {% else %}
+  .home {
+    background-color: {% if site.data.home-data.bgcolor %}
+    {{ site.data.home-data.bgcolor }}
+    {% else %}
+    #0B3C61
+    {% endif %};
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-size: auto auto;
+  }
+  {% endif %}
+
+  {% if site.data.home-data.text_color %}
+  .home * {
+    color: {{ site.data.home-data.text_color }};
+  }
+  {% else %}
+  .home * {
+    color : #fff;
+  }
+  {% endif %}
+
+  .img-wrapper {
+    border-radius: 5px;
+    width: 250px;
+    height: 250px;
+  }
+
+  {% assign home-data = site.data.home-data %}
+  {% if home-data.thumbnail %}
+  .img-wrapper {
+    background-size: cover !important;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-image:url({{ home-data.thumbnail }});
+  }
+  
+  {% endif %}
+
+  </style>
+
+</head>
+<body class="home">
+  <div class="home-content">
+    {% if site.data.home-data.thumbnail %}
+    <div class="container-fluid img-wrapper">
+      <!-- <img class="img-circle" src="{% if site.data.home-data.thumbnail %}
+      {{ site.data.home-data.thumbnail }}
+      {% else %}
+      /assets/images/hacker-boy.jpg
+      {% endif %}" alt="ME!"> -->
+    </div>
+    {% endif %}
+    <div class="container name">
+      <h1>{{ site.data.owner.name }}</h1>
+      <h3>{{ site.data.owner.description }}</h3>
+    </div>
+    <div class="container navigation">
+      <ul class="list-inline text-center">
+        {% for navitem in site.data.navigation %}
+        <li>
+          <a href="{{ navitem.url }}">
+            <i class="fa fa-fw {{ navitem.font-awesome-class }}"
+            data-toggle="tooltip" data-placement="bottom" title="{{ navitem.name }}">
+          </i>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div class="container profiles">
+    <ul class="list-inline text-center">
+      <li>
+        <a href="mailto:{{ site.data.owner.email }}">
+          <i class="fa fa-fw fa-envelope-o"
+          data-toggle="tooltip" data-placement="bottom" title="Hit me an e-mail!">
+        </i>
+      </a>
+    </li>
+    {% for profile in site.data.profiles %}
+    <li>
+      <a href="{{ profile.link }}">
+        <i class="fa fa-fw {{ profile.font-awesome-class }}"
+        data-toggle="tooltip" data-placement="bottom" title="{{ profile.site-name }}">
+      </i>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+</div>
+</div>
+</body>
+</html>

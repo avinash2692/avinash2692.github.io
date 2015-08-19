@@ -1,0 +1,231 @@
+h1, h2, h3, h4 , h5 , h6 , p {
+  padding: 15px;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+  }
+
+* {
+  vertical-align: baseline;
+}
+
+a {
+  color: #404040;
+}
+a:hover,
+a:focus {
+  color: #0085a1;
+}
+
+/*------------------------Home Design---------------------------*/
+
+.home, .home * {
+  text-align: center;
+}
+
+.home::before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+
+.home-content {
+  margin-top: 2%;
+  display: inline-block;
+  /*vertical-align: middle;*/
+  font-family: Josefin Slab;
+  font-size: 150%;
+  position: relative;
+  top: 50%;
+  transform: translateY(50%);
+}
+
+.home div * {
+  padding-top: 10px;
+  padding-bottom: 1px;
+}
+
+.home span {
+  font-size: 2.5rem;
+  width: 30px;
+  padding: 5px;
+}
+
+.home a {
+  margin: 2px;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 2rem;
+}
+.home a:hover{
+  background:rgba(0,0,0,0.5)
+}
+
+/*------------------------XXXXX---------------------------------*/
+/*------------------------Menu Looks----------------------------*/
+.button-wrapper {
+  display:inline;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+  vertical-align: top;
+}
+
+.menu-btn {
+  float: left;
+}
+
+.menu {
+  position: fixed;
+  width: 10%;
+  top: 25px;
+  left: 25px;
+  float: left;
+  border-radius: 5px;
+  display: none;
+  text-align:center;
+  max-width: 10%;
+}
+/*------------------------XXXXX---------------------------------*/
+/*------------------------Animation-----------------------------*/
+.menu {
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 0.1s;
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 0.1s;
+  animation-delay: 0s;
+  animation-duration: 0.1s;
+}
+
+.button-wrapper {
+  -webkit-animation-delay: 0s;
+  -webkit-animation-duration: 0.1s;
+  -moz-animation-delay: 0s;
+  -moz-animation-duration: 0.1s;
+  animation-delay: 0s;
+  animation-duration: 0.1s;
+}
+/*------------------------XXXXX---------------------------------*/
+
+/*------------------------Content-------------------------------*/
+.content {
+  position: relative;
+  margin: auto;
+  width: 70%;
+  overflow: auto;
+  /*font-size: 23px;*/
+  text-align: justify;
+  top: 25px;
+  /*z-index: -1;*/
+  color: #000000;
+}
+
+.content .jumbotron {
+  margin-top: 20px;
+}
+
+/*.content {
+background-image: url(http://images.nationalgeographic.com/wpf/media-live/photos/000/910/cache/chameleon-reptile-perched_91002_990x742.jpg);
+background-attachment: fixed;
+background-position: top;
+background-repeat: no-repeat;
+background-size: cover;
+}*/
+
+/*.content .jumbotron {
+background-image: url(http://static5.businessinsider.com/image/511d104a69bedd1f7c000012/grumpy-cat-definitely-did-not-make-100-million.jpg);
+background-position: top right;
+background-origin: content-box;
+background-repeat: no-repeat;
+background-size: 100px auto;
+}*/
+
+#thumbnail {
+  right: 25px;
+  top: 25px;
+  float: right;
+  margin: 20px;
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.content header {
+  height: 300px;
+  background-color: #fff;
+  background-color: rgba(128,128,128,0.5);
+  padding-top: 7px;
+}
+
+.content section {
+  background-color: #ffffff;
+}
+
+/*.content div {
+  height: 100%;
+}*/
+
+/*------------------------XXXXX---------------------------------*/
+/*------------------------Project index-------------------------*/
+
+.content-item {
+  text-align: justify;
+  margin-bottom: 5px;
+  padding: 5px;
+  border: solid #eee;
+  height: 10rem;
+}
+
+
+
+.content-item h3 {
+  display: inline;
+  font-size: 1.75em;
+  line-height: 1.25em;
+}
+
+.content-item p {
+  /*display: inline;*/
+  text-align: right;
+  padding: 0px;
+  font-size: 1em;
+  line-height: 1.6em;
+}
+
+.content-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.content-item a:hover {
+  text-decoration: underline;
+}
+
+/*---Something experimental I did
+      Didnt work                  ---*/
+.page-pop {
+  display: block;
+  position: fixed;
+  height: 100%;
+  width : 100%;
+  top: 0px;
+  left: 0px;
+  text-align: center;
+  background-color: #000;
+  opacity: 0.75;
+  z-index: 10;
+}
+
+.page-display iframe{
+  width: 70%;
+  height: 90%;
+  border: none;
+  position: relative;
+}
+/*---------------------------------*/
+
+/*------------------------XXXXX---------------------------------*/

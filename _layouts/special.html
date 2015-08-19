@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include menu.html %}
+  <div class="content panel panel-default container" style="display: flex; flex-flow: column;">
+    <iframe src="{{ site.url }}{{ page.page-link }}" style="position: relative; width: 100%; height: 700px; display: block; border:none;margin-bottom: 20px;"></iframe>
+  </div>
+  {% include footer.html %}
+
+</body>
+
+</html>

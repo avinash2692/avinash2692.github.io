@@ -1,0 +1,17 @@
+- name: About Me
+  url: /about/
+  font-awesome-class: fa-user
+
+- name: Skills
+  url: /skills/
+  font-awesome-class: fa-paint-brush
+
+- name: Projects
+  url: /projects/
+  font-awesome-class: fa-briefcase
+
+- name: Resume
+  url: /resume/
+  font-awesome-class: fa-folder
+
+# font-awesome-class can be put in from http://fortawesome.github.io/Font-Awesome/icons/

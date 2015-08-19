@@ -1,0 +1,19 @@
+<div class="button-wrapper fadeInLeft">
+  <button type="button" class="open-menu-btn btn btn-default btn-md" style="display: block"
+  title="Open Menu" data-toggle="tooltip" data-placement="bottom">
+  <span class="fa fa-bars w3-large"></span>
+</button>
+</div>
+<div class="menu list-group">
+  <a class="close-menu-btn list-group-item" href="#" title="Close Menu" data-toggle="tooltip" data-placement="bottom">
+    <i class="fa fa-fw fa-arrow-left"></i> close
+  </a>
+  <a class="list-group-item" href="/">
+    Home <i class="fa fa-fw fa-home" style="text-align: right"></i>
+  </a>
+  {% for navitem in site.data.navigation %}
+    <a class="list-group-item" href="{{ navitem.url }}">
+      {{ navitem.name }} <i class="fa fa-fw {{ navitem.font-awesome-class }}" style="text-align: right"></i>
+    </a>
+  {% endfor %}
+</div>

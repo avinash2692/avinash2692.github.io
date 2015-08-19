@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include head.html %}
+  <style media="screen">
+    {% if page.bgimage %}
+      body {
+        background-image: url({{ page.bgimage }});
+        background-attachment: fixed;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    {% else %}
+      {% if page.bgcolor %}
+        body {
+          background-color: #{{ page.bgcolor }};
+          background-image: none;
+          background-repeat: repeat;
+          background-attachment: scroll;
+          background-position: 0% 0%;
+          background-clip: border-box;
+          background-origin: padding-box;
+          background-size: auto auto;
+        }
+      {% endif %}
+    {% endif %}
+  </style>
+</head>
+<body>
+  {% include menu.html %}
+  <div class="content panel panel-default container">
+    <div class="jumbotron panel-heading">
+      <div id="thumbnail-wrapper">
+
+      </div>
+      <h1>{{ page.title }}</h1>
+      <p>{{ page.description }}</p>
+      <p>{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}</p>
+    </div>
+    <div class="panel-body">
+      {{ content }}
+    </div>
+  </div>
+
+  {% include footer.html %}
+
+</body>
+
+</html>

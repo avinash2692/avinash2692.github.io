@@ -1,0 +1,5 @@
+# - site-name: # website name. Like, seriously, I need this.
+#   username: # if valid
+#   link: # to your profile on the site
+#   font-awesome-class: # use this link to see what icon you would like and just write down the name
+#     # e.g. for the github icon, input fa-github. SIMPLE!; http://fortawesome.github.io/Font-Awesome/icons/
